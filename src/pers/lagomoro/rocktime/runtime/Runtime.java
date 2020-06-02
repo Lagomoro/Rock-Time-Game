@@ -10,7 +10,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import pers.lagomoro.rocktime.controller.MusicController;
 import pers.lagomoro.rocktime.controller.NodeController;
-import pers.lagomoro.rocktime.ui.MainWindow;
+import pers.lagomoro.rocktime.ui.WindowMain;
 
 public class Runtime {
 	
@@ -20,7 +20,7 @@ public class Runtime {
 		updateNodeController();
 
 		@SuppressWarnings("serial")
-		MainWindow mainWindow = new MainWindow() {
+		WindowMain mainWindow = new WindowMain() {
 			@Override
 			public void play() {
 				super.play();
@@ -73,7 +73,7 @@ public class Runtime {
         service.scheduleAtFixedRate(runnable, initialDelay, period, unit);
     }
     
-    private static void updateWindow(MainWindow window) {
+    private static void updateWindow(WindowMain window) {
         long initialDelay = 0;
         long period = 17;
         TimeUnit unit = TimeUnit.MILLISECONDS;

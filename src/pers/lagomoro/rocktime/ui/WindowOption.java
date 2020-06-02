@@ -19,13 +19,13 @@ import pers.lagomoro.rocktime.ui.module.KeyAdapterSet;
 import pers.lagomoro.rocktime.ui.widget.ButtonStyled;
 
 @SuppressWarnings("serial")
-public class OptionWindow extends JFrame{
+public class WindowOption extends JFrame{
 	
 	public static final int WIDTH = 300;
 	public static final int HEIGHT = 370;
 	public static final String TITLE = "游戏设置";
 	
-	public OptionWindow(){
+	public WindowOption(){
 		super();
 		this.initialize();
 		this.create();
@@ -194,8 +194,8 @@ public class OptionWindow extends JFrame{
 	        	super.onMouseDragged(e);
 	        	int deltaX = e.getXOnScreen() - startX;
 	        	int deltaY = e.getYOnScreen() - startY;
-	        	Point place = OptionWindow.this.getLocationOnScreen();
-	        	OptionWindow.this.setLocation(place.x + deltaX, place.y + deltaY);
+	        	Point place = WindowOption.this.getLocationOnScreen();
+	        	WindowOption.this.setLocation(place.x + deltaX, place.y + deltaY);
 	        	startX = e.getXOnScreen();
                 startY = e.getYOnScreen();
 	        }

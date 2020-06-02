@@ -17,7 +17,7 @@ import pers.lagomoro.rocktime.ui.module.KeyAdapterSet;
 import pers.lagomoro.rocktime.ui.widget.ButtonStyled;
 
 @SuppressWarnings("serial")
-public class MainWindow extends JFrame{
+public class WindowMain extends JFrame{
 	
 	public static final int WIDTH = 812 / 2;
 	public static final int HEIGHT = 624 + 100;
@@ -25,9 +25,9 @@ public class MainWindow extends JFrame{
 	
 	public ButtonStyled pauseButton;
 	
-	public OptionWindow optionWindow;
+	public WindowOption optionWindow;
 	
-	public MainWindow(){
+	public WindowMain(){
 		super();
 		this.initialize();
 		this.create();
@@ -45,7 +45,7 @@ public class MainWindow extends JFrame{
 		this.addKeyListener(new KeyAdapterSet());
 		this.requestFocus();
 		
-		this.optionWindow = new OptionWindow();
+		this.optionWindow = new WindowOption();
 	}
 	
 	protected void create() {
@@ -184,8 +184,8 @@ public class MainWindow extends JFrame{
 	        	super.onMouseDragged(e);
 	        	int deltaX = e.getXOnScreen() - startX;
 	        	int deltaY = e.getYOnScreen() - startY;
-	        	Point place = MainWindow.this.getLocationOnScreen();
-	        	MainWindow.this.setLocation(place.x + deltaX, place.y + deltaY);
+	        	Point place = WindowMain.this.getLocationOnScreen();
+	        	WindowMain.this.setLocation(place.x + deltaX, place.y + deltaY);
 	        	startX = e.getXOnScreen();
                 startY = e.getYOnScreen();
 	        }

@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 import pers.lagomoro.rocktime.controller.NodeController;
-import pers.lagomoro.rocktime.ui.MainWindow;
+import pers.lagomoro.rocktime.ui.WindowMain;
 import pers.lagomoro.rocktime.ui.ViewMusic;
 
 public class Rail {
@@ -71,7 +71,7 @@ public class Rail {
 	
 	public ArrayList<DrawNode> getDrawNodes() {
 		ArrayList<DrawNode> list = new ArrayList<DrawNode>();
-		int distance = MainWindow.HEIGHT - ViewMusic.LINE_PLACE - 4;
+		int distance = WindowMain.HEIGHT - ViewMusic.LINE_PLACE - 4;
 		for (int i = 0; i < nodeList.size(); i++) {
 			Node node = nodeList.get(i);
 			int startDistance = NodeController.getDistance(NodeController.getJudgeTime(), node.getStartTime());
