@@ -34,7 +34,7 @@ public class Runtime {
 					NodeController.reset();
 					NodeController.loadNotes(filename);
 					MusicController.reset();
-					MusicController.play(foldername + "\\" + NodeController.getFilename().trim() + ".wav");
+					MusicController.play(foldername + "\\" + NodeController.getFilename().trim());
 				}
 			}
 			@Override

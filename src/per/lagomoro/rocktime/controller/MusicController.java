@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
+import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -140,7 +142,8 @@ public class MusicController {
 		if(playStatus > 0) return;
 		reset();
 		new Thread(() -> {
-			AudioInputStream inputStream = null;
+			AudioInputStream inputStream = null, inputStream2 = null;
+			AudioFormat audioFormat = null;
 			SourceDataLine player = null;
 			try {
 				File file = new File(filepath);
@@ -149,14 +152,35 @@ public class MusicController {
 					return;
 				}
 				nowMusic = file.getName().substring(0, file.getName().length() - 4);
-				inputStream = AudioSystem.getAudioInputStream(file);
+				
+				inputStream2 = AudioSystem.getAudioInputStream(file);
+				audioFormat = inputStream2.getFormat();
+				if (audioFormat.getEncoding() != AudioFormat.Encoding.PCM_SIGNED) {
+					audioFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, audioFormat.getSampleRate(), 
+							16, audioFormat.getChannels(), audioFormat.getChannels() * 2,audioFormat.getSampleRate(), false);
+					inputStream = AudioSystem.getAudioInputStream(audioFormat, inputStream2);
+				}else {
+					inputStream = inputStream2;
+				}
 				Clip clip = AudioSystem.getClip();
 				clip.open(inputStream);
 				maxTime = clip.getMicrosecondLength()/1000;
 				clip.close();
-				inputStream = AudioSystem.getAudioInputStream(file);
-				player = AudioSystem.getSourceDataLine(inputStream.getFormat());
-				player.open();
+				inputStream.close();
+				inputStream2.close();
+				
+				inputStream2 = AudioSystem.getAudioInputStream(file);
+				audioFormat = inputStream2.getFormat();
+				if (audioFormat.getEncoding() != AudioFormat.Encoding.PCM_SIGNED) {
+					audioFormat = new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, audioFormat.getSampleRate(), 
+							16, audioFormat.getChannels(), audioFormat.getChannels() * 2,audioFormat.getSampleRate(), false);
+					inputStream = AudioSystem.getAudioInputStream(audioFormat, inputStream2);
+				}else {
+					inputStream = inputStream2;
+				}
+				DataLine.Info dataLineInfo = new DataLine.Info(SourceDataLine.class, audioFormat, AudioSystem.NOT_SPECIFIED);
+				player = (SourceDataLine) AudioSystem.getLine(dataLineInfo);
+				player.open(audioFormat);
 				while(waitTime > 0) {waitTime --;Thread.sleep(1);}
 				playStatus = 1;
 				player.start();
@@ -167,9 +191,7 @@ public class MusicController {
 					fixTime = new Date().getTime();
 					currentTime = player.getMicrosecondPosition()/1000;
 					player.write(buffer, 0, length);
-					if(playStatus > 1) player.stop();
-					while(playStatus > 1) {}
-					//player.drain();
+					while(playStatus > 1) {player.stop();}
 					player.start();
 				}
 			} catch (UnsupportedAudioFileException e) {
@@ -183,6 +205,7 @@ public class MusicController {
 			}finally {
 				try {
 					if(inputStream != null) inputStream.close();
+					if(inputStream2 != null) inputStream2.close();
 					if(player != null) player.close();
 				} catch (IOException e) {
 					e.printStackTrace();
