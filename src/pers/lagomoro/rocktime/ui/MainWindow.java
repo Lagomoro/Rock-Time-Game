@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.ui;
+package pers.lagomoro.rocktime.ui;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -9,12 +9,12 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
 
-import per.lagomoro.rocktime.controller.MusicController;
-import per.lagomoro.rocktime.controller.NodeController;
-import per.lagomoro.rocktime.ui.module.Controllable;
-import per.lagomoro.rocktime.ui.module.KeyAdapterSet;
-import per.lagomoro.rocktime.ui.widget.ButtonStyled;
-import per.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.controller.MusicController;
+import pers.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.ui.module.Controllable;
+import pers.lagomoro.rocktime.ui.module.KeyAdapterSet;
+import pers.lagomoro.rocktime.ui.widget.ButtonStyled;
 
 @SuppressWarnings("serial")
 public class MainWindow extends JFrame{

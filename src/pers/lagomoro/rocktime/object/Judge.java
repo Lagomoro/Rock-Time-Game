@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.object;
+package pers.lagomoro.rocktime.object;
 
 public class Judge {
 

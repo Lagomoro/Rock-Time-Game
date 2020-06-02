@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.ui;
+package pers.lagomoro.rocktime.ui;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
@@ -15,12 +15,12 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import per.lagomoro.rocktime.controller.MusicController;
-import per.lagomoro.rocktime.controller.NodeController;
-import per.lagomoro.rocktime.object.DrawNode;
-import per.lagomoro.rocktime.object.Hard;
-import per.lagomoro.rocktime.ui.module.Controllable;
-import per.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.controller.MusicController;
+import pers.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.object.DrawNode;
+import pers.lagomoro.rocktime.object.Hard;
+import pers.lagomoro.rocktime.ui.module.Controllable;
 
 @SuppressWarnings("serial")
 public class ViewMusic extends JPanel implements Controllable{

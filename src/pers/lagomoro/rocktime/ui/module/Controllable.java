@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.ui.module;
+package pers.lagomoro.rocktime.ui.module;
 
 
 import java.awt.Component;

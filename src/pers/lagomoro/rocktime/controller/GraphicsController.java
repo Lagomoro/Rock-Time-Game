@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.controller;
+package pers.lagomoro.rocktime.controller;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -34,25 +34,25 @@ public class GraphicsController {
 	public static final Color TOUCH_BLUE_COLOR = new Color(150, 150, 150, 255);
 	
 	public static void setHint(Graphics2D graphics) {
-		//²åÖµÌáÊ¾¼ü = È¡Ñù£º9¸ö
+		//ï¿½ï¿½Öµï¿½ï¿½Ê¾ï¿½ï¿½ = È¡ï¿½ï¿½ï¿½ï¿½9ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-		//Alpha²åÖµÌáÊ¾¼ü = Alpha»ìºÏËã·¨£ºÊÓ¾õÖÊÁ¿ÓÅÏÈ
+		//Alphaï¿½ï¿½Öµï¿½ï¿½Ê¾ï¿½ï¿½ = Alphaï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY);
-        //¿¹¾â³ÝÌáÊ¾¼ü = ¿¹¾â³ÝÄ£Ê½£º×î¼Ñ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		//ÎÄ±¾¿¹¾â³ÝÌáÊ¾¼ü = ¿¹¾â³ÝÄ£Ê½£ºLCDÏÔÊ¾Æ÷£¬ÓÅÏÈË®Æ½·½Ïò£¬RGBÈ¡Öµ
+		//ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½LCDï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®Æ½ï¿½ï¿½ï¿½ï¿½RGBÈ¡Öµ
 		graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-        //LCD ÎÄ±¾¶Ô±È³ÊÏÖÌáÊ¾¼ü = ÎÄ±¾¶Ô±È¶È£ºµÍ
+        //LCD ï¿½Ä±ï¿½ï¿½Ô±È³ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½Ä±ï¿½ï¿½Ô±È¶È£ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_TEXT_LCD_CONTRAST, 180);
-		//×ÖÌåÐ¡Êý¹æ¸ñÌáÊ¾¼ü = ¹âÕ¤»¯×ÓÏñËØ£º¿ª
+		//ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½ï¿½Õ¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON );
-		//³ÊÏÖÌáÊ¾¼ü = Í¼ÏñÖÊÁ¿£ºÊÓ¾õÖÊÁ¿ÓÅÏÈ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-		//ÑÕÉ«³ÊÏÖÌáÊ¾¼ü = ÑÕÉ«×ª»»£ºÊÓ¾õÖÊÁ¿ÓÅÏÈ
+		//ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½ï¿½É«×ªï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_QUALITY);
-        //¶¶¶¯ÌáÊ¾¼ü = É«²Ê¶¶¶¯£ºÔÊÐí
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = É«ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
-        //±Ê»®¹æ·¶»¯¿ØÖÆÌáÊ¾¼ü = ¼¸ºÎÐÎ×´£ºäÖÈ¾µ½×ÓÏñËØ
+        //ï¿½Ê»ï¿½ï¿½æ·¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ = ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½È¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		graphics.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
 	}
 	

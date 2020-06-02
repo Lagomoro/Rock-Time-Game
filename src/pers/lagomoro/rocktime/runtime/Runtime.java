@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.runtime;
+package pers.lagomoro.rocktime.runtime;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -8,9 +8,9 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import per.lagomoro.rocktime.controller.MusicController;
-import per.lagomoro.rocktime.controller.NodeController;
-import per.lagomoro.rocktime.ui.MainWindow;
+import pers.lagomoro.rocktime.controller.MusicController;
+import pers.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.ui.MainWindow;
 
 public class Runtime {
 	

@@ -1,12 +1,12 @@
-package per.lagomoro.rocktime.object;
+package pers.lagomoro.rocktime.object;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-import per.lagomoro.rocktime.controller.NodeController;
-import per.lagomoro.rocktime.ui.MainWindow;
-import per.lagomoro.rocktime.ui.ViewMusic;
+import pers.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.ui.MainWindow;
+import pers.lagomoro.rocktime.ui.ViewMusic;
 
 public class Rail {
 

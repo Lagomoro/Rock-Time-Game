@@ -1,8 +1,8 @@
-package per.lagomoro.rocktime.object;
+package pers.lagomoro.rocktime.object;
 
 import java.awt.Color;
 
-import per.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.controller.NodeController;
 
 public class Hold extends Node{
 

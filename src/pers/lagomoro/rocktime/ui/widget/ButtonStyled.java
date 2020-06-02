@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.ui.widget;
+package pers.lagomoro.rocktime.ui.widget;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
-import per.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.controller.GraphicsController;
 
 @SuppressWarnings("serial")
 public class ButtonStyled extends Button{

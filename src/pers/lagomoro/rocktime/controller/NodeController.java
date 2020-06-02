@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.controller;
+package pers.lagomoro.rocktime.controller;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -14,10 +14,10 @@ import java.util.regex.Pattern;
 
 import javax.swing.ImageIcon;
 
-import per.lagomoro.rocktime.object.DrawNode;
-import per.lagomoro.rocktime.object.Hard;
-import per.lagomoro.rocktime.object.Judge;
-import per.lagomoro.rocktime.object.Rail;
+import pers.lagomoro.rocktime.object.DrawNode;
+import pers.lagomoro.rocktime.object.Hard;
+import pers.lagomoro.rocktime.object.Judge;
+import pers.lagomoro.rocktime.object.Rail;
 
 public class NodeController {
 	

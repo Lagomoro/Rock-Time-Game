@@ -1,9 +1,9 @@
-package per.lagomoro.rocktime.ui.module;
+package pers.lagomoro.rocktime.ui.module;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-import per.lagomoro.rocktime.controller.NodeController;
+import pers.lagomoro.rocktime.controller.NodeController;
 
 public class KeyAdapterSet extends KeyAdapter{
 

@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.ui.widget;
+package pers.lagomoro.rocktime.ui.widget;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
@@ -6,8 +6,8 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 
-import per.lagomoro.rocktime.controller.GraphicsController;
-import per.lagomoro.rocktime.ui.module.Controllable;
+import pers.lagomoro.rocktime.controller.GraphicsController;
+import pers.lagomoro.rocktime.ui.module.Controllable;
 
 @SuppressWarnings("serial")
 public class Button extends JButton implements Controllable{

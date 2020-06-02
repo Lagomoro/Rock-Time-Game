@@ -1,4 +1,4 @@
-package per.lagomoro.rocktime.controller;
+package pers.lagomoro.rocktime.controller;
 
 import java.awt.Color;
 import java.io.File;
